@@ -6,7 +6,8 @@ var fs = require('fs');
 var infile = "index.html";
 
 buf = new Buffer(fs.readFileSync(infile));
-str = buf.toString;
+var str = buf.toString();
+
 
 app.get('/', function(request, response) {
   response.send(str);
